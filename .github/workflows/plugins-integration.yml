@@ -67,7 +67,7 @@ jobs:
         run: pip install docker-compose zabbix-api
 
       - name: Install ansible.netcommon collection
-        run: ansible-galaxy collection install ansible.netcommon
+        run: ansible-galaxy collection install ansible.netcommon -p /home/runner/collections
 
       # For Zabbix integration tests we need to test against different versions of
       # the Zabbix server. To do this we spin up a Docker container using the `matrix`
