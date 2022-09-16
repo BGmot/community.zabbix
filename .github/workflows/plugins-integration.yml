@@ -68,6 +68,20 @@ jobs:
 
       - name: Install ansible.netcommon collection
         run: ansible-galaxy collection install ansible.netcommon -p /home/runner/collections
+        working-directory: ./ansible_collections/community/zabbix
+
+      - name: Debugging 1
+        run: ansible-config dump | grep COLLECTIONS_PATHS
+        working-directory: ./ansible_collections/community/zabbix
+
+      - name: Debugging 2
+        run: ansible-galaxy collection list
+        working-directory: ./ansible_collections/community/zabbix
+
+      - name: Debugging 3
+        run: which ansible-galaxy && which python && which ansible-test
+        working-directory: ./ansible_collections/community/zabbix
+
 
       # For Zabbix integration tests we need to test against different versions of
       # the Zabbix server. To do this we spin up a Docker container using the `matrix`
