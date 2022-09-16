@@ -67,19 +67,19 @@ jobs:
         run: pip install docker-compose zabbix-api
 
       - name: Install ansible.netcommon collection
-        run: ansible-galaxy collection install ansible.netcommon -p /home/runner/collections
+        run: ansible-galaxy collection install ansible.netcommon -p /home/runner/.ansible/collections
         working-directory: ./ansible_collections/community/zabbix
 
       - name: Debugging 1
-        run: ansible-config dump | grep COLLECTIONS_PATHS
+        run: which ansible-galaxy && which python && which ansible-test
         working-directory: ./ansible_collections/community/zabbix
 
       - name: Debugging 2
-        run: ansible-galaxy collection list
+        run: ansible-config dump | grep COLLECTIONS_PATHS
         working-directory: ./ansible_collections/community/zabbix
 
       - name: Debugging 3
-        run: which ansible-galaxy && which python && which ansible-test
+        run: ansible-galaxy collection list
         working-directory: ./ansible_collections/community/zabbix
 
 
