@@ -67,7 +67,7 @@ jobs:
         run: pip install docker-compose zabbix-api
 
       - name: Install ansible.netcommon collection
-        run: ansible-galaxy collection install ansible.netcommon -p /home/runner/.ansible/collections
+        run: ansible-galaxy collection install ansible.netcommon -p /home/runner/work/community.zabbix/community.zabbix
         working-directory: ./ansible_collections/community/zabbix
 
       - name: Debugging 1
