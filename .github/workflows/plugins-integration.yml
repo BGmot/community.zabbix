@@ -79,7 +79,7 @@ jobs:
         working-directory: ./ansible_collections/community/zabbix
 
       - name: Debugging 3
-        run: ansible-galaxy collection list
+        run: ansible-galaxy collection list --collections-path /home/runner/work/community.zabbix/community.zabbix
         working-directory: ./ansible_collections/community/zabbix
 
 
