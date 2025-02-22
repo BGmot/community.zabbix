@@ -19,7 +19,7 @@
     - ansible_facts.services["firewalld"].state == "running"
 
 - name: restart win zabbix agent
-  win_service:
+  ansible.windows.win_service:
     name: "{{ zabbix_win_svc_name }}"
     state: restarted
   when:
