@@ -44,6 +44,7 @@ jobs:
           - nginx
           - apache
         version:
+          - v72
           - v70
           - v64
           - v60
