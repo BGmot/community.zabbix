@@ -40,6 +40,11 @@
   ansible.builtin.include_tasks: selinux.yml
   when: ansible_facts.selinux.status | default('disabled') == 'enabled'
 
+- name: Zabbix 7.2 needs fping from epel repo
+  set_fact:
+    _zabbix_server_disable_repo: []
+  when: zabbix_server_version == 7.2
+
 - name: Install zabbix-server packages
   ansible.builtin.package:
     name: "{{ _zabbix_server_packages }}"
