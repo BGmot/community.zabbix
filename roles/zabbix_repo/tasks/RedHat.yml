@@ -1,5 +1,4 @@
 ---
-- debug: var=zabbix_repo_yum
 # Tasks specific for RedHat systems
 
 - name: "RedHat | Make sure old file is absent"
