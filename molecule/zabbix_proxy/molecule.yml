@@ -42,6 +42,8 @@ provisioner:
         zabbix_proxy_name: proxy1
         ansible_httpapi_port: 8080
         ansible_zabbix_url_path: ""
+      v72:
+        zabbix_proxy_version: 7.2
       v70:
         zabbix_proxy_version: 7.0
       v64:
