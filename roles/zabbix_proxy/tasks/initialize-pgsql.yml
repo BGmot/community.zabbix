@@ -79,4 +79,4 @@
         port: "{{ zabbix_proxy_dbport }}"
         db: "{{ zabbix_proxy_dbname }}"
         state: restore
-        target: /usr/share/zabbix-sql-scripts/postgresql/proxy.sql
+        target: /usr/share/zabbix{% if zabbix_proxy_version == 7.2 %}/{% else %}-{% endif %}sql-scripts/postgresql/proxy.sql
