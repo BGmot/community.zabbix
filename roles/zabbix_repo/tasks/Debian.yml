@@ -44,8 +44,6 @@
   tags:
     - install
 
-- debug: var=zabbix_repo_version
-- debug: var=zabbix_repo_deb_url
 - name: "Debian | Installing repository {{ ansible_distribution }}"
   ansible.builtin.copy:
     dest: /etc/apt/sources.list.d/zabbix.sources
